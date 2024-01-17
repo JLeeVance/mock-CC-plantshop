@@ -20,7 +20,7 @@ function PlantPage() {
   }, [] )
 
   // console.log(plantsToRen)
-
+  // console.log(searchValue)
 
   return (
     <main>
@@ -31,10 +31,13 @@ function PlantPage() {
        />
       <Search 
       searchValue={searchValue}
-      setSearchValue={setSearchValue}
+      onSearchChange={handleSearchChange}
 
       />
-      <PlantList plantsToRen={plantsToRen}  />
+      <PlantList 
+      plantsToRen={plantsToRen}  
+      searchValue={searchValue}
+      />
     </main>
   );
 }
