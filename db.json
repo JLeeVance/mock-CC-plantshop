@@ -41,12 +41,6 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
-    },
-    {
-      "name": "Variegated Monstera Adansonii",
-      "image": "https://www.thejunglecollective.com.au/wp-content/uploads/2023/03/Monsterra-Adansonii-Variegated.jpg.webp",
-      "price": "39",
-      "id": 8
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({ plantsToRen , searchValue }) {
+function PlantList({ plantsToRen , searchValue , setPlantsToRen }) {
 
   const searchedPlants = plantsToRen.filter((plantObj) => {
     if (searchValue === ''){
@@ -19,6 +19,9 @@ function PlantList({ plantsToRen , searchValue }) {
   name={plantObj.name}
   image={plantObj.image}
   price={plantObj.price}
+  id={plantObj.id}
+  plantsToRen={plantsToRen}
+  setPlantsToRen={setPlantsToRen}
   />
   )
 

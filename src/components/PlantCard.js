@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 
-function PlantCard({ name , image, price  }) {
+
+function PlantCard({ name , image, price , id , plantsToRen , setPlantsToRen }) {
 
   const [ isStocked , setIsStocked ] = useState(true)
 
   function handleSoldOut(){
     setIsStocked((isStocked) => !isStocked)
+  }
+
+  function handleDelete(){
+    // console.log(id)
+    fetch(`http://localhost:6001/plants/${id}` , {method: "DELETE"})
+    let newlyDeletedPlants = plantsToRen.filter((plantObj) => {
+      return plantObj.id !== id;
+    })
+    setPlantsToRen(newlyDeletedPlants);
   }
 
   return (
@@ -18,6 +28,7 @@ function PlantCard({ name , image, price  }) {
       ) : (
         <button onClick={handleSoldOut} >Out of Stock</button>
       )}
+      <button onClick={handleDelete}> Delete From Stock</button>
     </li>
   );
 }

@@ -37,6 +37,7 @@ function PlantPage() {
       <PlantList 
       plantsToRen={plantsToRen}  
       searchValue={searchValue}
+      setPlantsToRen={setPlantsToRen}
       />
     </main>
   );
